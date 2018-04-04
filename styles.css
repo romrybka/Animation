@@ -1,0 +1,116 @@
+
+/* simple css reset */
+html {
+  box-sizing: border-box;
+  /* outline: 1px lightgray dashed; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  outline: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* general styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.section {
+  background: #f9f9f9;
+  padding-top: 35px;
+  padding-bottom: 65px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(81, 78, 78);
+  display: block;
+}
+
+.section__header {
+  margin-bottom: 55px;
+  margin-left: 130px;
+  transition: margin 1s;
+}
+
+.section__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transition: margin 1s;
+}
+
+.item {
+  width: 350px;
+  background: white;
+  padding: 13px 15px 55px 40px;
+  margin: 0px 5px 28px;
+  border-radius: 6px;
+  box-shadow: 0 0px 15px rgba(128, 128, 128, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s, width 0.5s;
+}
+
+.item:hover,
+.item:active {
+  transform: translate(0px, -10px);
+  box-shadow: 0 0px 15px rgba(128, 128, 128, 0.15),
+              0 10px 15px rgba(128, 128, 128, 0.2);
+}
+
+.item div {
+  color: rgb(202, 92, 36);
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.item h3 {
+  color: rgb(202, 92, 36);
+  margin-bottom: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.item p {
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .section__items {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .item {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .item {
+    width: 100%;
+  }
+
+  .section__header {
+    margin-left: 50px;
+  }
+}
